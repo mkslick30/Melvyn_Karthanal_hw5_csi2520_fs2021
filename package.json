@@ -4,7 +4,7 @@
   "description": "hmwk 5",
   "main": "index.js",
   "scripts": {
-    "start": "index",
+    "start": "node index",
     "dev": "nodemon index"
   },
   "repository": {
