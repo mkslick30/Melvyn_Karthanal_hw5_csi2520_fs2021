@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Page</title>
+
+    <link rel="stylesheet" href="../public/css/style_sheet.css">
+    <link rel="shortcut icon" href="../public/img/OULogo.jpeg" type="image/jpeg">
+
+    <script src="https://kit.fontawesome.com/a928d6c8bc.js" crossorigin="anonymous"></script>
+    <script defer src="../public/js/myAppExample.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <span><a href="../public/index.html">Home</a></span>
+            &nbsp;&Tab;
+            <span><a href="../public/html/my_resume.html">Resume Page</a></span>
+            &nbsp;&Tab;
+            <span><a href="../public/html/my_fun_facts.html">Fun Facts</a></span>
+            <span><a href="./index.ejs">Trivia Page</a></span>
+        </nav>
+        <h1>Trivia Page</h1>
+
+    </header>
+    <main>
+       
+        <section>
+            
+            <h3>What fraternity am I in?</h3>
+            <ol type="a">
+                <li>Delta Delta Delta</li>
+                <li>Alpha Sigma Phi</li>
+                <li>Sigma Pi</li>
+                <li>Theta Chi</li>
+                
+            </ol>
+
+            <input type="text" id="q1" display="none" value="USER TYPES ANSWER HERE" style="width: 1000px"></input>
+            <h3>From who is my favorite quote told by?</h3>
+            <ol type="a">
+                <li>Tom Cruise</li>
+                <li>Kanye West</li>
+                <li>Harsimhar Singh</li>
+                <li>Donald Trump</li>
+                
+            </ol>
+
+            <input type="text" id="q2" display="none" value="USER TYPES ANSWER HERE" style="width: 1000px"></input>
+            <h3>What is my Major?</h3>
+            <ol type="a">
+                <li>Business</li>
+                <li>Nursing</li>
+                <li>Theatre</li>
+                <li>IT</li>
+                
+            </ol>
+
+            <input type="text" id="q3" display="none" value="USER TYPES ANSWER HERE" style="width: 1000px"></input>
+            <h3>What year did my favorite movie come out?</h3>
+            <ol type="a">
+                <li>1998</li>
+                <li>2017</li>
+                <li>2018</li>
+                <li>2020</li>
+                
+            </ol>
+
+            <input type="text" id="q4" display="none" value="USER TYPES ANSWER HERE" style="width: 1000px"></input>
+            <h3>What artist sang my favorite song?</h3>
+            <ol type="a">
+                <li>Token</li>
+                <li>Frank Ocean</li>
+                <li>JunkBunnies</li>
+                <li>JuiceWRLD</li>
+                
+            </ol>
+
+            <input type="text" id="q5" display="none" value="USER TYPES ANSWER HERE" style="width: 1000px"></input>
+            
+            <br>
+            
+            <button type="submit" id="submit">SUBMIT</button>
+
+            <p>Score: <p id="score"></p></p>
+                
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <p class="footer">&copy; 2021, Melvyn Karthanal</p>
+        
+        <p class="footer">mkarthanal@oakland.edu</p>
+        
+        <i class="fab fa-facebook-f"></i>
+        <a href="https://www.facebook.com/profile.php?id=100010040566998" aria-label="Facebook logo">Facebook</a>
+        
+        <i class="fab fa-instagram"></i>
+        <a href="https://www.instagram.com/mk_slick/" aria-label="Instagram logo">Instagram</a>
+        
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/melvyn-karthanal" aria-label="linkdin logo">linkdin</a>
+    </footer>
+
+    <script>
+        function correct {
+            counter += 1;
+        }
+        function enterScore {
+            console.log("button clicked")
+            counter = 0
+            let q1 = document.querySelector('#q1').value;
+            if (q1 === "b"){
+                counter.correct();
+            }
+
+            let q2 = document.querySelector('#q2').value;
+            if (q2 === "c"){
+                counter.correct();
+            }
+
+            let q3 = document.querySelector('#q3').value;
+            if (q3 === "d"){
+                counter.correct();
+            }
+
+            let q4 = document.querySelector('#q4').value;
+            if (q4 === "d"){
+                counter.correct();
+            }
+
+            let q5 = document.querySelector('#q5').value;
+            if (q5 === "a"){
+                counter.correct();
+            }
+
+            document.querySelector('#score').innerHTML = counter
+
+        }
+        var counter = 0;
+
+        const submitBtn = document.getElementById('#submit');
+        submitBtn.addEventListener('click', enterScore);
+        
+    </script>
+</body>
+</html>
